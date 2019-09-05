@@ -1,0 +1,88 @@
+.app .background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.app .sea {
+  position: absolute;
+  bottom: 0;
+  top: 60vh;
+  left: 0;
+  right: 0;
+  background: rgba(28, 129, 142, 0.7);
+}
+
+.app .iceberg {
+  position: absolute;
+  left: 5vw;
+  top: calc(60vh - 20vh);
+  max-width: 80vw;
+  min-width: 50vw;
+}
+
+.app .bear {
+  width: 30vw;
+  position: absolute;
+  left: 20vw;
+}
+
+.app .toggle {
+  width: inherit;
+  height: inherit;
+  background: none;
+  border: none;
+  color: #444;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.app .toolbar {
+  text-align: right;
+}
+
+.app .toggle:hover {
+  color: #000;
+}
+
+.app .stats {
+  padding: 20px;
+  font-size: 1rem;
+  bottom: 5vh;
+  top: unset;
+}
+
+.app .stats tr:hover {
+  background: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+
+.app .stats th {
+  font-weight: normal;
+  text-align: left;
+}
+
+.app .stats th,
+.app .stats td {
+  padding: 3px 5px;
+}
+
+.app .stats h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: normal;
+}
+
+.app .explanation {
+  right: 10vw;
+}
+
+.app .explanation .text {
+  padding: 20px;
+}
+
+.app .explanation .toggle {
+  
+}

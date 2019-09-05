@@ -1,0 +1,16 @@
+.box {
+  font-family: 'Indie Flower', cursive;
+  position: absolute;
+  right: 5vw;
+  top: 5vh;
+  max-width: 80vw;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 1.0);
+  font-size: 1.5rem;
+  box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.19);
+  transition: width, height 1s ease-in-out;
+}
+
+.box.translucent {
+  background: rgba(255, 255, 255, 0.7);
+}

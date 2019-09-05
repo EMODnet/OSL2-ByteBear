@@ -1,0 +1,19 @@
+.scale {
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.scale .bar {
+  display: inline-block;
+  border: solid 2px #005;
+  margin-left: 10px;
+  width: 100px;
+  box-sizing: border-box;
+  height: 0.8rem;
+  display: flex;
+}
+
+.scale .fill {
+  background: #005;
+  display: inline-block;
+}
