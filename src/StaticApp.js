@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import { FromStore } from './store/index';
 
 import Question from './components/Question/index';
 import Box from './components/Box/Box';
@@ -85,6 +86,7 @@ class App extends Component {
 
   answer(answer) {
     console.log('App answer', answer);
+    this.props.addAnswer(answer);
     this.setState({
       answers: [ ...this.state.answers, answer ]
     });
@@ -110,8 +112,9 @@ class App extends Component {
     let bear = polarBears.neutral;
     let result = 'neutral';
     let answer;
+
     if (this.state.answers.length) {
-      const lastAnswer = this.state.answers[this.state.answers.length - 1].answer;
+      const lastAnswer = this.props.answers[this.props.answers.length - 1].answer;
       answer = questions[0].answers.find((answer) => answer.value === lastAnswer);
       if (answer) {
         result = answer.result;
@@ -125,15 +128,18 @@ class App extends Component {
           <div class="sea"></div>
         </div>
         <main>
-          <Tracker answers={this.state.answers} />
+          <Tracker answers={this.props.answers} />
           { result === 'bad' ? (<img class="bear" src={polarBearSad}
-            style={{ top: `calc(60vh - 40vh` }}
+            alt="Your polar bear is sad"
+            style={{ bottom: `calc(40vh - 30px` }}
           />) : null }
           { result === 'good' ? (<img class="bear" src={polarBearHappy}
-            style={{ top: `calc(60vh - 40vh` }}
+            alt="Your polar bear is happy"
+            style={{ bottom: `calc(40vh + 20px` }}
           />) : null }
           { result === 'neutral' ? (<img class="bear" src={polarBear}
-            style={{ top: `calc(60vh - 40vh` }}
+            alt="Your Polar Bear"
+            style={{ bottom: `calc(40vh + 20px` }}
           />) : null }
           <Box class="stats translucent">
             <h2>Current Polar Conditions</h2>
@@ -174,7 +180,7 @@ class App extends Component {
                 ) : null }
               </Box>
             ) : null }
-            <Box class={ this.state.showingQuestion ? 'showing' : 'hidden' }>
+            <Box class={ `questionBox${this.state.showingQuestion ? ' showing' : ' hidden'}` }>
               { this.state.showingQuestion ? (
                 <Question question={questions[0]} onAnswer={this.answer} />
               ) : (
@@ -192,4 +198,4 @@ class App extends Component {
   }
 };
 
-export default App;
+export default FromStore('answers')(App);

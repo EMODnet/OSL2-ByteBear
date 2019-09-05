@@ -18,7 +18,7 @@
 .app .iceberg {
   position: absolute;
   left: 5vw;
-  top: calc(60vh - 20vh);
+  top: calc(60vh - 100px);
   max-width: 80vw;
   min-width: 50vw;
 }
@@ -27,6 +27,7 @@
   width: 30vw;
   position: absolute;
   left: 20vw;
+  min-width: 270px;
 }
 
 .app .toggle {
@@ -50,7 +51,8 @@
 .app .stats {
   padding: 20px;
   font-size: 1rem;
-  bottom: 5vh;
+  bottom: 1rem;
+  right: 1rem;
   top: unset;
 }
 
@@ -75,8 +77,22 @@
   font-weight: normal;
 }
 
+.app .explanation,
+.app .questionBox {
+  top: 3rem;
+}
+
 .app .explanation {
-  right: 10vw;
+  right: 5rem;
+}
+
+.app .questionBox,
+.app .explanation.showing {
+  right: 1rem;
+}
+
+.app .explanation.showing {
+  z-index: 1;
 }
 
 .app .explanation .text {

@@ -17,7 +17,6 @@ class Question extends Component {
   }
 
   answer(answer) {
-    console.log('got an answer', answer);
     let newState;
 
     const rootAnswer = this.state.question === null ? answer : this.state.answer.answer;
@@ -52,8 +51,6 @@ class Question extends Component {
       this.props.onAnswer(newState.answer);
     }
 
-    console.log('adding to state', newState);
-
     this.setState(newState);
   }
 
@@ -66,8 +63,6 @@ class Question extends Component {
     const rootAnswer = (this.state.question !== null && this.state.answer.answer) || null;
 
     question = rootAnswer && this.props.question.answers.find((item) => item.value === rootAnswer);
-
-    console.log('found answer', rootAnswer, question);
 
     if (question) {
       question = question.questions[this.state.question];

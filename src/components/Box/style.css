@@ -1,9 +1,9 @@
 .box {
   font-family: 'Indie Flower', cursive;
   position: absolute;
-  right: 5vw;
-  top: 5vh;
-  max-width: 80vw;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
   border-radius: 10px;
   background: rgba(255, 255, 255, 1.0);
   font-size: 1.5rem;

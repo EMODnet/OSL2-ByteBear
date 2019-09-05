@@ -18,8 +18,12 @@ const adapter = localStorageAdapter();
 persistStore(store, adapter);
 
 const actions = store => ({
-  addAnswer: ({answers}, answer) => ([ ...answers, answer ])
+  addAnswer: ({answers}, answer) => ({
+    answers: [ ...answers, answer ]
+  })
 });
+
+const actionInitialiser = (store) => (actions);
 
 export const Store = ({children}) => h(
   Provider, {

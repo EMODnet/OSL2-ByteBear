@@ -4,6 +4,10 @@
   top: 1vh;
   left: 1vw;
   font-family: 'Indie Flower', cursive;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-sizing: border-box;
 }
 
 .tracker .history {
@@ -25,10 +29,13 @@
 .tracker .history .timeline {
   flex-grow: 1;
   display: flex;
+  margin: 2px 0;
+  border: solid 1px rgba(28, 129, 142);
 }
 
 .tracker .history .timeline .answer {
-  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 15px;
   background: rgba(28, 129, 142);
 }
 
