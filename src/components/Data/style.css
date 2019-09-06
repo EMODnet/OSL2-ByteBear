@@ -12,15 +12,20 @@
   font-size: 1.5rem;
 }
 
-.data .explanation {
+.data .variable {
   margin-bottom: 10px;
+  color: #aaa;
+}
+
+.data .variable.open {
+  color: #000;
 }
 
 .data .title {
   cursor: pointer;
 }
 
-.data .text {
+.data .contents {
   padding: 5px 20px;
   display: none;
 }
@@ -29,7 +34,7 @@
   margin: 0;
 }
 
-.data .explanation.open .text {
+.data .variable.open .contents {
   display: block;
 }
 

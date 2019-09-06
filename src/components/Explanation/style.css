@@ -24,6 +24,14 @@
   margin: 0;
 }
 
+.explanations .explanation {
+  color: #aaa;
+}
+
+.explanations .explanation.open {
+  color: #000;
+}
+
 .explanations .explanation.open .text {
   display: block;
 }

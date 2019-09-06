@@ -99,6 +99,10 @@
   
 }
 
+.app .planation .toggle {
+  font-family: 'Indie Flower', cursive;
+}
+
 .app .dataBox {
   top: 3rem;
   left: 1rem;

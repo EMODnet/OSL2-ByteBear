@@ -35,6 +35,7 @@ const polarBears = {
 
 const stats = [
   {
+    id: 'temp',
     label: 'Temperature',
     value: 0,
     min: -32,
@@ -42,6 +43,7 @@ const stats = [
     unit: 'C'
   },
   {
+    id: 'sst',
     label: 'Sea Temperature',
     value: 0,
     min: -32,
@@ -49,6 +51,7 @@ const stats = [
     unit: 'C'
   },
   {
+    id: 'ice',
     label: 'Ice Coverage',
     value: 60,
     min: 10,
@@ -56,6 +59,7 @@ const stats = [
     unit: '%'
   },
   {
+    id: 'co2',
     label: 'Atomospheric CO2',
     value: 350,
     min: 200,
@@ -99,7 +103,7 @@ class App extends Component {
 
     setTimeout(() => {
       this.toggleShowing('Explanation');
-    }, 1000);
+    }, 50);
   }
 
   toggleShowing(type) {
@@ -107,6 +111,12 @@ class App extends Component {
 
     this.setState({
       [key]: !this.state[key]
+    });
+  }
+
+  showData(variable) {
+    this.setState({
+      showingData: variable
     });
   }
 
@@ -149,7 +159,7 @@ class App extends Component {
             <table cellspacing="0" cellpadding="0">
               { stats.map((stat) => (
                 <tr
-                  onClick={() => this.toggleShowing('Data') }
+                  onClick={() => this.showData(stat.id) }
                 >
                   <th>{stat.label}</th>
                   <td>
@@ -173,9 +183,12 @@ class App extends Component {
                   >
                     { this.state.showingExplanation ? (
                       <i class="fa fa-times" />
-                    ) : (
-                      <i class="fa fa-question" />
-                    ) }
+                    ) : [
+                      'More Info About Choices ',
+                      (
+                        <i class="fa fa-question" />
+                      )
+                    ] }
                   </button>
                 </div>
                 { this.state.showingExplanation ? (
@@ -204,7 +217,7 @@ class App extends Component {
                   <i class="fa fa-times" />
                 </button>
               </div>
-              <Data/>
+              <Data open={this.state.showingData}/>
             </Box>
           ) : null }
         </main>
