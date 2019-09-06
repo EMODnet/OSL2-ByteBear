@@ -95,10 +95,13 @@
   z-index: 1;
 }
 
-.app .explanation .text {
-  padding: 20px;
-}
-
 .app .explanation .toggle {
   
+}
+
+.app .dataBox {
+  top: 3rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
 }

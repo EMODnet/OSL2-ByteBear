@@ -1,5 +1,6 @@
 export default [
   {
+    title: 'Travel',
     question: 'How are you getting to work today?',
     answers: [
       {

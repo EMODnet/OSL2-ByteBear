@@ -6,6 +6,8 @@ import Box from './components/Box/Box';
 import Format from './components/Format/Format';
 import Scale from './components/Scale/Scale';
 import Tracker from './components/Tracker/Tracker';
+import Explanation from './components/Explanation/Explanation';
+import Data from './components/Data/Data';
 
 import './StaticApp.css';
 
@@ -112,9 +114,10 @@ class App extends Component {
     let bear = polarBears.neutral;
     let result = 'neutral';
     let answer;
+    let lastAnswer;
 
     if (this.state.answers.length) {
-      const lastAnswer = this.props.answers[this.props.answers.length - 1].answer;
+      lastAnswer = this.props.answers[this.props.answers.length - 1].answer;
       answer = questions[0].answers.find((answer) => answer.value === lastAnswer);
       if (answer) {
         result = answer.result;
@@ -145,7 +148,9 @@ class App extends Component {
             <h2>Current Polar Conditions</h2>
             <table cellspacing="0" cellpadding="0">
               { stats.map((stat) => (
-                <tr>
+                <tr
+                  onClick={() => this.toggleShowing('Data') }
+                >
                   <th>{stat.label}</th>
                   <td>
                     <Scale min={stat.min} max={stat.max}
@@ -174,9 +179,7 @@ class App extends Component {
                   </button>
                 </div>
                 { this.state.showingExplanation ? (
-                  <Format class="text">
-                    { answer.impactExplanation }
-                  </Format>
+                  <Explanation answer={lastAnswer} question={questions[0]} />
                 ) : null }
               </Box>
             ) : null }
@@ -192,6 +195,18 @@ class App extends Component {
               ) }
             </Box>
           </div>
+          { this.state.showingData ? (
+            <Box class="dataBox">
+              <div class="toolbar">
+                <button class="toggle"
+                  onClick={() => this.toggleShowing('Data')}
+                >
+                  <i class="fa fa-times" />
+                </button>
+              </div>
+              <Data/>
+            </Box>
+          ) : null }
         </main>
       </div>
     );

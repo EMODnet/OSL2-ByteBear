@@ -1,0 +1,35 @@
+.data {
+  padding: 20px;
+}
+
+.data h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.data .variable h2 {
+  font-size: 1.5rem;
+}
+
+.data .explanation {
+  margin-bottom: 10px;
+}
+
+.data .title {
+  cursor: pointer;
+}
+
+.data .text {
+  padding: 5px 20px;
+  display: none;
+}
+
+.data .text p:first-child {
+  margin: 0;
+}
+
+.data .explanation.open .text {
+  display: block;
+}
+

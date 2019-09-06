@@ -1,0 +1,29 @@
+.explanations {
+  padding: 20px;
+}
+
+.explanations h2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.explanations .explanation {
+  margin-bottom: 10px;
+}
+
+.explanations .title {
+  cursor: pointer;
+}
+
+.explanations .text {
+  padding: 5px 20px;
+  display: none;
+}
+
+.explanations .text p:first-child {
+  margin: 0;
+}
+
+.explanations .explanation.open .text {
+  display: block;
+}
