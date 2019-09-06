@@ -37,10 +37,10 @@ const stats = [
   {
     id: 'temp',
     label: 'Temperature',
-    value: 0,
+    value: -1,
     min: -32,
     max: 8,
-    unit: 'C'
+    unit: ' °C'
   },
   {
     id: 'sst',
@@ -48,15 +48,15 @@ const stats = [
     value: 0,
     min: -32,
     max: 8,
-    unit: 'C'
+    unit: ' °C'
   },
   {
     id: 'ice',
     label: 'Ice Coverage',
-    value: 60,
-    min: 10,
-    max: 90,
-    unit: '%'
+    value: 11,
+    min: 2,
+    max: 20,
+    unit: ' %'
   },
   {
     id: 'co2',
@@ -64,7 +64,7 @@ const stats = [
     value: 350,
     min: 200,
     max: 350,
-    unit: 'ppm'
+    unit: ' ppm'
   }
 ];
 
@@ -162,12 +162,12 @@ class App extends Component {
                   onClick={() => this.showData(stat.id) }
                 >
                   <th>{stat.label}</th>
-                  <td>
+                  <td class="scaleContainer">
                     <Scale min={stat.min} max={stat.max}
                       value={stat.value}
                     />
                   </td>
-                  <td>
+                  <td class="unitContainer">
                     {stat.value}{stat.unit}
                   </td>
                 </tr>

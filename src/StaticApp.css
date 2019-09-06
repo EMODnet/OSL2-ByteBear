@@ -77,6 +77,14 @@
   font-weight: normal;
 }
 
+.app .stats .scaleContainer {
+  width: 100px;
+}
+
+.app .stats .unitContainer {
+  padding-left: 10px;
+}
+
 .app .explanation,
 .app .questionBox {
   top: 3rem;
