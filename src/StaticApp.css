@@ -104,11 +104,10 @@
 }
 
 .app .explanation .toggle {
-  
-}
-
-.app .planation .toggle {
   font-family: 'Indie Flower', cursive;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.74rem 1rem;
 }
 
 .app .dataBox {

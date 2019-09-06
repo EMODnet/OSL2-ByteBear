@@ -183,12 +183,7 @@ class App extends Component {
                   >
                     { this.state.showingExplanation ? (
                       <i class="fa fa-times" />
-                    ) : [
-                      'More Info About Choices ',
-                      (
-                        <i class="fa fa-question" />
-                      )
-                    ] }
+                    ) : 'More Info About Choices ' }
                   </button>
                 </div>
                 { this.state.showingExplanation ? (
