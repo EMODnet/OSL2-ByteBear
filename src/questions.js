@@ -1,7 +1,7 @@
 export default [
   {
     title: 'Travel',
-    question: 'How are you getting to work today?',
+    question: 'How are you getting around today?',
     answers: [
       {
         value: 'car',
