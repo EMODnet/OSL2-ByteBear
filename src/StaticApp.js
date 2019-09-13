@@ -93,9 +93,6 @@ class App extends Component {
   answer(answer) {
     console.log('App answer', answer);
     this.props.addAnswer(answer);
-    this.setState({
-      answers: [ ...this.state.answers, answer ]
-    });
 
     this.toggleShowing('Question');
 
@@ -126,7 +123,7 @@ class App extends Component {
     let answer;
     let lastAnswer;
 
-    if (this.state.answers.length) {
+    if (this.props.answers.length) {
       lastAnswer = this.props.answers[this.props.answers.length - 1].answer;
       answer = questions[0].answers.find((answer) => answer.value === lastAnswer);
       if (answer) {
