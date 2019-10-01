@@ -58,7 +58,7 @@
     "unistore": "^3.4.1",
     "url-loader": "0.5.7",
     "webpack": "1.13.1",
-    "webpack-dev-server": "1.14.1",
+    "webpack-dev-server": "3.1.11",
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
