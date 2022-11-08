@@ -50,7 +50,7 @@
     "promise": "7.1.1",
     "react-plotly.js": "^2.3.0",
     "react-test-renderer": "^15.3.0",
-    "recursive-readdir": "2.0.0",
+    "recursive-readdir": "2.2.3",
     "rimraf": "2.5.4",
     "strip-ansi": "3.0.1",
     "style-loader": "0.13.1",
