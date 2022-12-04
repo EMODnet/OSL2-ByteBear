@@ -44,7 +44,7 @@
     "object-assign": "4.1.0",
     "opn": "4.0.2",
     "path-exists": "3.0.0",
-    "plotly.js": "^1.49.4",
+    "plotly.js": "^1.58.5",
     "postcss-loader": "0.9.1",
     "preact-compat": "^3.19.0",
     "promise": "7.1.1",
@@ -57,7 +57,7 @@
     "unissist": "^1.4.0",
     "unistore": "^3.4.1",
     "url-loader": "0.5.7",
-    "webpack": "1.13.1",
+    "webpack": "5.75.0",
     "webpack-dev-server": "3.1.11",
     "whatwg-fetch": "1.0.0"
   },
